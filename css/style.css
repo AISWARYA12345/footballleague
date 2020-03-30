@@ -1,0 +1,58 @@
+
+header {
+    min-height: 107px;
+} 
+
+.breadcrumb-sec {
+    background: #333;
+}
+.bread-box {
+    display: flex;
+    justify-content: space-between;
+}
+.bread-box h3 {
+     padding-top: 10px;
+     color: #fff;
+     text-transform: capitalize;
+}
+
+.main-menu-section .navbar.navbar-inverse .navbar-collapse ul.nav.navbar-nav li.active a{
+  color: #d8302f;
+  }
+.section-content .sec-form input[type="text"],.sec-form input[type="password"],.sec-form input[type="file"],.section-content .sec-form input[type="date"]{
+    padding: 2px 5px;
+    margin-bottom: 7px;
+    width: 100%;
+}
+.section-content .sec-form select{
+    padding: 7px 5px;
+    margin-bottom: 7px;
+    width: 100%;
+}
+.sec-form label{
+     color: #333;
+     font-weight: 500;
+}
+.table-w-100{
+     width: 100%;
+}
+.btn-info {
+    background: #6da7da;
+}
+.res-table th{
+     color: #333;
+}
+.res-table td,.res-table th{
+     padding: 5px 6px;
+}
+.btn-no-float{
+     float: none;
+}
+.btn-tbl-del {
+    background: #F44336;
+    padding: 1px 8px;
+    color: #fff;
+}
+.right_top_section {
+    padding: 1px 0 0;
+}

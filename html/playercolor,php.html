@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>
+Registered Candidates
+</title>
+<body >
+<!--
+Coded by Prof. Sajeev Jaladharan
+Date : 27.11.2015
+email: sajeevjal@gmail.com
+-->
+<?php
+
+
+
+$con = mysql_connect("localhost","root","");
+if (!$con)
+  {
+      die('Could not connect: ' . mysql_error());
+  }
+
+mysql_select_db("snitdb",$con);
+$result = mysql_query("SELECT * FROM player order by id");
+
+?>
+ <table width="81%" border="0"  align="center">
+<tr>
+      <td colspan="12" align="center" width='300'><img id=bg src="images/bgacademic.jpg"  /> </td>
+     
+     
+    </tr>
+<tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>State</th>     
+      <th>Email</th>
+      <th>LPhone</th>
+      <th>Mobile</th>
+      <th>Qualification</th>
+      <th>Subject</th>
+      <th>College</th>
+     
+    </tr>
+
+<tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+
+<?php
+$i=-1;
+while($row = mysql_fetch_array($result))
+  {
+    if($i==1)
+    {
+        $clr="#FFFFFF";       
+        $tclr="#000000";
+    }
+    else
+    {
+        $clr="#666666";
+        $tclr="#FFFFFF";
+    }
+    $i=$i * -1;
+
+    echo "<tr>";
+      echo "<td  bgcolor='$clr'><font color='$tclr'>".$row['id'] . "</font></td> ";
+    echo "<td  bgcolor='$clr'><font color='$tclr'>".$row['Name'] . "</font></td> ";
+    echo "<td  bgcolor='$clr'><font color='$tclr'>".$row['address'] . "</font></td> ";
+      echo "<td bgcolor='$clr'><font color='$tclr'>".$row['phone'] . "</font></td> ";
+    echo "<td bgcolor='$clr'><font color='$tclr'>".$row['email'] . "</font></td> ";
+    echo "<td  bgcolor='$clr'><font color='$tclr'>".$row['height'] . "</font></td> ";
+      echo "<td bgcolor='$clr'><font color='$tclr'>".$row['weight'] . "</font></td> ";
+      echo "<td bgcolor='$clr'><font color='$tclr'>".$row['type'] . "</font></td> ";
+    echo "<td  bgcolor='$clr'><font color='$tclr'>".$row['totalmatches'] . "</font></td> ";
+      echo "<td bgcolor='$clr'><font color='$tclr'>".$row['password'] . "</font></td> ";
+   
+    echo "</tr>";
+  }
+
+mysql_close($con);
+?>
+
+
+   
+  
+  </table>
+  <div class="info" align="center">
+    <h2>&nbsp;</h2>
+</div>
+
+<ul><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,26 @@
+inner-information-text
+
+
+inner-information-text
+
+search
+
+
+col-md-4		col-md-8
+
+
+navbar copy
+-------------------------------
+Remove league menu
+
+-------------------------- EDIT-------------
+
+goaldiff removed from pointtable
+
+---------NOT COMPLETED----------------------
+view player list player not added ---
+
+
+
+
+
